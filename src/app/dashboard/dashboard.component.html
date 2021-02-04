@@ -1,0 +1,43 @@
+<mat-toolbar color="primary" class="app-header">
+    <div><a href="#"  class="positronx">Dashboard</a></div>
+    <span class="nav-tool-items">
+      <a mat-button mat-raised-button routerLink="register" routerLinkActive="active">Sign Out</a>
+    </span>
+  </mat-toolbar>
+  
+  <mat-card class="box">
+    <mat-card-header>
+        <mat-card-title>My Information Update  </mat-card-title>
+      </mat-card-header>
+
+    <form class="example-form"  (ngSubmit)="Addusers(UserData)" #UserData="ngForm">
+
+
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input matInput  placeholder="Name" name="name" ngModel #name="ngModel">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Surname" name="surname" ngModel #surname="ngModel">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput  placeholder="Email" name="email" ngModel #email="ngModel">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Location" name="location" ngModel #location="ngModel">
+          </mat-form-field>
+      </mat-card-content>
+     
+      <button mat-raised-button color="primary" class="btn-block googl-sign" type="submit" >Update</button>
+    </form>
+  </mat-card>
+  <h5>Updates Are:</h5>
+
+  <ul>
+    <li *ngFor="let item of persons">
+        {{ item.payload.doc.data().name }}
+    </li>
+  </ul>

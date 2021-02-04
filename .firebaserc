@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fir-authentication-3d0c8": {
+      "hosting": {
+        "Mlab": [
+          "fir-authentication-3d0c8"
+        ]
+      }
+    }
+  }
+}

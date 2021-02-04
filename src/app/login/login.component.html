@@ -1,0 +1,37 @@
+<div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center">
+  
+  <mat-toolbar color="primary" class="app-header">
+    <div><a href="#"  class="positronx">Firebase Authentication</a></div>
+    <span class="nav-tool-items">
+
+      <a mat-button mat-raised-button routerLink="/register" routerLinkActive="active">Register</a>
+      
+    </span>
+  </mat-toolbar>
+
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Log-in</mat-card-title>
+      </mat-card-header>
+  
+      <form class="example-form"  (ngSubmit)="LogIn(UseerData)" #UseerData="ngForm">
+
+
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email" name="email" ngModel required #email="ngModel">
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Password" name="password" ngModel required #password="ngModel">
+          </mat-form-field>
+        </mat-card-content>
+        <button mat-raised-button color="primary" class="btn-block" type="submit">Login With Email</button>
+        <button mat-raised-button color="primary" class="btn-block googl-sign"  >Login With Google</button>
+      </form>
+    </mat-card>
+  
+  </div>
+
+
+
